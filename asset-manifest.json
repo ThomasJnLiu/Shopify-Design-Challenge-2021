@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/shopify-design-challenge-2021/static/css/main.8c8b27cf.chunk.css",
+    "main.js": "/shopify-design-challenge-2021/static/js/main.1237786f.chunk.js",
+    "main.js.map": "/shopify-design-challenge-2021/static/js/main.1237786f.chunk.js.map",
+    "runtime-main.js": "/shopify-design-challenge-2021/static/js/runtime-main.c84c3956.js",
+    "runtime-main.js.map": "/shopify-design-challenge-2021/static/js/runtime-main.c84c3956.js.map",
+    "static/js/2.7aad621e.chunk.js": "/shopify-design-challenge-2021/static/js/2.7aad621e.chunk.js",
+    "static/js/2.7aad621e.chunk.js.map": "/shopify-design-challenge-2021/static/js/2.7aad621e.chunk.js.map",
+    "static/js/3.7d9e9c31.chunk.js": "/shopify-design-challenge-2021/static/js/3.7d9e9c31.chunk.js",
+    "static/js/3.7d9e9c31.chunk.js.map": "/shopify-design-challenge-2021/static/js/3.7d9e9c31.chunk.js.map",
+    "index.html": "/shopify-design-challenge-2021/index.html",
+    "static/css/main.8c8b27cf.chunk.css.map": "/shopify-design-challenge-2021/static/css/main.8c8b27cf.chunk.css.map",
+    "static/js/2.7aad621e.chunk.js.LICENSE.txt": "/shopify-design-challenge-2021/static/js/2.7aad621e.chunk.js.LICENSE.txt",
+    "static/media/logo.6ce24c58.svg": "/shopify-design-challenge-2021/static/media/logo.6ce24c58.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.c84c3956.js",
+    "static/js/2.7aad621e.chunk.js",
+    "static/css/main.8c8b27cf.chunk.css",
+    "static/js/main.1237786f.chunk.js"
+  ]
+}
