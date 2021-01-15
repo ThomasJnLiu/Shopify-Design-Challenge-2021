@@ -5,8 +5,8 @@ const Search = ({ getQuery }) => {
   const [text, setText] = useState("");
   const [movies, setMovies] = useState([]);
 
-  const OnChange = (q) => {
-    setText(q);
+  const OnChange = (query) => {
+    setText(query);
   };
 
   const SearchMovie = async () => {
@@ -25,7 +25,7 @@ const Search = ({ getQuery }) => {
           type="text"
           placeholder="Search movies"
           value={text}
-          onChange={(e) => OnChange(e.target.value)}
+          onChange={(event) => OnChange(event.target.value)}
           autoFocus
         />
       </form>
