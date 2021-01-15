@@ -1,25 +1,37 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState, useEffect } from "react";
+import logo from "./logo.svg";
+import "./App.css";
+import APIComponent from "./components/APIComponent";
+import Search from "./components/Search";
+import axios from "axios";
 
-function App() {
+const App = () => {
+  // const url = "http://www.omdbapi.com/?apikey=e95d3a07&s=";
+  // const [query, setQuery] = useState("");
+  // const [response, setResponse] = useState(false);
+  // const [data, setData] = useState(null);
+
+  // useEffect(() => {
+  //   const fetchitems = async () => {
+  //     const result = await axios(
+  //       `http://www.omdbapi.com/?apikey=e95d3a07&s=${query}`
+  //     );
+  //     if (result.data.Response) {
+  //       console.log(result.data.Search);
+  //       setResponse(result.data.Response);
+  //       setData(result.data);
+  //     }
+  //   };
+
+  //   fetchitems();
+  // }, [query]);
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      {/* <Search getQuery={(q) => setQuery(q)} /> */}
+      <Search />
     </div>
   );
-}
+};
 
 export default App;
