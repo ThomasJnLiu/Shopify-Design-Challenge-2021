@@ -26,11 +26,13 @@ const Search = ({ getResult }) => {
     } else {
       console.log("movies is undefined");
     }
+    getResult(movies);
   }, [movies]);
 
   return (
-    <>
+    <div className="search">
       <form>
+        <h1>Movie Title</h1>
         <input
           type="text"
           placeholder="Search movies"
@@ -39,14 +41,12 @@ const Search = ({ getResult }) => {
           autoFocus
         />
       </form>
-      <button onClick={SearchMovie} style={{ display: "block" }}>
-        Search
-      </button>
-      <MoviesGrid newMovies={movies} />
+      <button onClick={SearchMovie}>Search</button>
+      {/* <MoviesGrid newMovies={movies} /> */}
       {/* {movies.map((movie, index) => (
         <h1 key={index}>{movie.Title}</h1>
       ))} */}
-    </>
+    </div>
   );
 };
 

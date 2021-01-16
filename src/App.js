@@ -31,8 +31,11 @@ const App = () => {
 
   return (
     <div className="App">
-      <Search />
-      <Nominations />
+      <Search getResult={(r) => setMovies(r)} />
+      <div className="content">
+        {" "}
+        <MoviesGrid newMovies={movies} /> <Nominations />
+      </div>
     </div>
   );
 };

@@ -3,7 +3,11 @@ import MoviesCard from "./MoviesCard";
 
 const MoviesGrid = ({ newMovies }) => {
   if (newMovies === undefined) {
-    return <>undefined</>;
+    return (
+      <>
+        <div className="movies">undefined</div>
+      </>
+    );
   } else {
     return (
       <div className="movies">
