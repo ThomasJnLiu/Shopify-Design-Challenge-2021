@@ -1,22 +1,32 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
+import MoviesGrid from "./MoviesGrid";
 
-const Search = ({ getQuery }) => {
+const Search = ({ getResult }) => {
   const [text, setText] = useState("");
   const [movies, setMovies] = useState([]);
 
-  const OnChange = (query) => {
-    setText(query);
+  const OnChange = (q) => {
+    setText(q);
   };
 
   const SearchMovie = async () => {
     const result = await axios(
       `http://www.omdbapi.com/?apikey=e95d3a07&s=${text}`
+      // `http://www.omdbapi.com/?apikey=e95d3a07&s=avengers`
     );
     setMovies(result.data.Search);
     console.log(result.data.Search);
-    console.log(movies);
   };
+
+  useEffect(() => {
+    if (movies !== undefined) {
+      console.log("movies are defined");
+      console.log(movies);
+    } else {
+      console.log("movies is undefined");
+    }
+  }, [movies]);
 
   return (
     <>
@@ -29,7 +39,13 @@ const Search = ({ getQuery }) => {
           autoFocus
         />
       </form>
-      <button onClick={SearchMovie}>Search</button>
+      <button onClick={SearchMovie} style={{ display: "block" }}>
+        Search
+      </button>
+      <MoviesGrid newMovies={movies} />
+      {/* {movies.map((movie, index) => (
+        <h1 key={index}>{movie.Title}</h1>
+      ))} */}
     </>
   );
 };

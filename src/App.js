@@ -3,9 +3,12 @@ import logo from "./logo.svg";
 import "./App.css";
 import APIComponent from "./components/APIComponent";
 import Search from "./components/Search";
+import MoviesGrid from "./components/MoviesGrid";
+import Nominations from "./components/Nominations";
 import axios from "axios";
 
 const App = () => {
+  const [movies, setMovies] = useState([]);
   // const url = "http://www.omdbapi.com/?apikey=e95d3a07&s=";
   // const [query, setQuery] = useState("");
   // const [response, setResponse] = useState(false);
@@ -28,8 +31,8 @@ const App = () => {
 
   return (
     <div className="App">
-      {/* <Search getQuery={(q) => setQuery(q)} /> */}
       <Search />
+      <Nominations />
     </div>
   );
 };
