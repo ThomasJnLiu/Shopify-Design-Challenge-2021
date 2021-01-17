@@ -14,7 +14,9 @@ const App = () => {
     const exist = nominations.find((x) => x.imdbID === nomMovie.imdbID);
     if (exist) {
     } else {
-      setNominations([...nominations, { ...nomMovie }]);
+      if (nominations.length < 5) {
+        setNominations([...nominations, { ...nomMovie }]);
+      }
     }
     // if (exist) {
     //   // setNominations(
@@ -25,6 +27,18 @@ const App = () => {
     // } else {
     // }
   };
+
+  const onRemove = (nomMovie) => {
+    const nom2 = [...nominations];
+    const index = nom2.indexOf(nomMovie);
+
+    nom2.splice(index, 1);
+    setNominations(nom2);
+  };
+
+  useEffect(() => {
+    console.log({ nominations });
+  }, [nominations]);
   // const url = "http://www.omdbapi.com/?apikey=e95d3a07&s=";
   // const [query, setQuery] = useState("");
   // const [response, setResponse] = useState(false);
@@ -50,8 +64,12 @@ const App = () => {
       <Search getResult={(r) => setMovies(r)} />
       <div className="content">
         {" "}
-        <MoviesGrid onAdd={onAdd} newMovies={movies} />
-        <Nominations onAdd={onAdd} movies={nominations} />
+        <MoviesGrid
+          onAdd={onAdd}
+          newMovies={movies}
+          nominations={nominations}
+        />
+        <Nominations onRemove={onRemove} movies={nominations} />
       </div>
     </div>
   );

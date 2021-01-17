@@ -1,7 +1,7 @@
 import React from "react";
 import MoviesCard from "./MoviesCard";
 
-const MoviesGrid = ({ newMovies, onAdd }) => {
+const MoviesGrid = ({ newMovies, onAdd, nominations }) => {
   if (newMovies === undefined) {
     return (
       <>
@@ -12,6 +12,22 @@ const MoviesGrid = ({ newMovies, onAdd }) => {
     return (
       <div className="movies">
         {newMovies.map((movie, index) => {
+          const alreadyNominated = nominations.find(
+            (x) => x.imdbID === movie.imdbID
+          );
+          if (alreadyNominated) {
+            console.log(movie.Title + " is nominated");
+            return (
+              <>
+                <MoviesCard
+                  key={index}
+                  movie={movie}
+                  onAdd={onAdd}
+                  isNominated
+                />
+              </>
+            );
+          }
           return (
             <>
               <MoviesCard key={index} movie={movie} onAdd={onAdd} />

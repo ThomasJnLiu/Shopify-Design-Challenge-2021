@@ -83,9 +83,27 @@ h1 {
   text-align: center;
   border-radius: 3px;
   padding: 0.5rem 0;
+  border: none;
 }
 
+.nominate-button:hover {
+  background-color: #5e962d;
+}
 .nominate-button p {
+  color: white;
+  display: block;
+  margin: 0;
+}
+
+.nominate-button-disabled {
+  background-color: #cccccc;
+  width: 100%;
+  text-align: center;
+  border-radius: 3px;
+  padding: 0.5rem 0;
+  border: none;
+}
+.nominate-button-disabled p {
   color: white;
   display: block;
   margin: 0;
@@ -109,6 +127,13 @@ h1 {
 
 ul {
   list-style-type: none;
+  padding-left: none;
+}
+
+ul button {
+  background-color: #ffffff;
+  border: none;
+  color: #ed1e24;
 }
 @media (max-width: 800px) {
   .cards {
