@@ -1,10 +1,11 @@
 import React from "react";
 
-const NominateButton = () => {
+const NominateButton = (props) => {
+  const onAdd = props.onAdd;
   return (
-    <div class="nominate-button">
+    <button onClick={onAdd} class="nominate-button">
       <p>Nominate</p>
-    </div>
+    </button>
   );
 };
 

@@ -106,6 +106,10 @@ h1 {
 .content {
   display: flex;
 }
+
+ul {
+  list-style-type: none;
+}
 @media (max-width: 800px) {
   .cards {
     grid-template-columns: repeat(2, 1fr);

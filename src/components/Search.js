@@ -16,16 +16,9 @@ const Search = ({ getResult }) => {
       // `http://www.omdbapi.com/?apikey=e95d3a07&s=avengers`
     );
     setMovies(result.data.Search);
-    console.log(result.data.Search);
   };
 
   useEffect(() => {
-    if (movies !== undefined) {
-      console.log("movies are defined");
-      console.log(movies);
-    } else {
-      console.log("movies is undefined");
-    }
     getResult(movies);
   }, [movies]);
 

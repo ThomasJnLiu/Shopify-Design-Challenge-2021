@@ -1,7 +1,7 @@
 import React from "react";
 import MoviesCard from "./MoviesCard";
 
-const MoviesGrid = ({ newMovies }) => {
+const MoviesGrid = ({ newMovies, onAdd }) => {
   if (newMovies === undefined) {
     return (
       <>
@@ -12,10 +12,9 @@ const MoviesGrid = ({ newMovies }) => {
     return (
       <div className="movies">
         {newMovies.map((movie, index) => {
-          console.log(movie.Title);
           return (
             <>
-              <MoviesCard key={index} movie={movie} />
+              <MoviesCard key={index} movie={movie} onAdd={onAdd} />
             </>
           );
         })}

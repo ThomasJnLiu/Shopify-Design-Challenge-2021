@@ -9,6 +9,22 @@ import axios from "axios";
 
 const App = () => {
   const [movies, setMovies] = useState([]);
+  const [nominations, setNominations] = useState([]);
+  const onAdd = (nomMovie) => {
+    const exist = nominations.find((x) => x.imdbID === nomMovie.imdbID);
+    if (exist) {
+    } else {
+      setNominations([...nominations, { ...nomMovie }]);
+    }
+    // if (exist) {
+    //   // setNominations(
+    //   //   // nominations.map((x) =>
+    //   //   //   x.id === nomMovie.id ? { ...exist, qty: exist.qty + 1 } : x
+    //   //   // )
+    //   // );
+    // } else {
+    // }
+  };
   // const url = "http://www.omdbapi.com/?apikey=e95d3a07&s=";
   // const [query, setQuery] = useState("");
   // const [response, setResponse] = useState(false);
@@ -34,7 +50,8 @@ const App = () => {
       <Search getResult={(r) => setMovies(r)} />
       <div className="content">
         {" "}
-        <MoviesGrid newMovies={movies} /> <Nominations />
+        <MoviesGrid onAdd={onAdd} newMovies={movies} />
+        <Nominations onAdd={onAdd} movies={nominations} />
       </div>
     </div>
   );
