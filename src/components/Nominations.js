@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React from "react";
 
 const Nominations = ({ movies, onRemove, nominationCapped }) => {
   console.log(nominationCapped);
@@ -27,7 +27,6 @@ const Nominations = ({ movies, onRemove, nominationCapped }) => {
       >
         <p>Submit</p>
       </button>
-      {/* {nominationCapped ? <button>Submit</button> : <h1>not</h1>} */}
     </div>
   );
 };

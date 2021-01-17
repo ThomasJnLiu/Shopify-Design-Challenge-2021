@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
-import MoviesGrid from "./MoviesGrid";
 
 const Search = ({ getResult }) => {
   const [text, setText] = useState("");
@@ -34,10 +33,6 @@ const Search = ({ getResult }) => {
         />
       </form>
       <button onClick={SearchMovie}>Search</button>
-      {/* <MoviesGrid newMovies={movies} /> */}
-      {/* {movies.map((movie, index) => (
-        <h1 key={index}>{movie.Title}</h1>
-      ))} */}
     </div>
   );
 };

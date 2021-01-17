@@ -1,5 +1,4 @@
 import React from "react";
-import NominateButton from "./NominateButton";
 
 const MoviesCard = ({ movie, key, onAdd, isNominated }) => {
   if (isNominated) {
@@ -12,7 +11,6 @@ const MoviesCard = ({ movie, key, onAdd, isNominated }) => {
         <button onClick={() => onAdd(movie)} class="nominate-button-disabled">
           <p>Nominated</p>
         </button>
-        {/* <NominateButton onAdd={onAdd} /> */}
       </div>
     );
   } else {
@@ -25,7 +23,6 @@ const MoviesCard = ({ movie, key, onAdd, isNominated }) => {
         <button onClick={() => onAdd(movie)} class="nominate-button">
           <p>Nominate</p>
         </button>
-        {/* <NominateButton onAdd={onAdd} /> */}
       </div>
     );
   }

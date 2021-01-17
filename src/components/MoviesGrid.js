@@ -36,16 +36,6 @@ const MoviesGrid = ({ newMovies, onAdd, nominations }) => {
       </div>
     );
   }
-  // if (newMovies === undefined) {
-  // } else {
-  //   return (
-  //     <div>
-  //       {newMovies.map((movie, index) => {
-  //         <h1 key={index}>{movie.Title}</h1>;
-  //       })}
-  //     </div>
-  //   );
-  // }
 };
 
 export default MoviesGrid;
