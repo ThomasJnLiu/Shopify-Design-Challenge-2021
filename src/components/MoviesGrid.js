@@ -16,7 +16,6 @@ const MoviesGrid = ({ newMovies, onAdd, nominations }) => {
             (x) => x.imdbID === movie.imdbID
           );
           if (alreadyNominated) {
-            console.log(movie.Title + " is nominated");
             return (
               <>
                 <MoviesCard

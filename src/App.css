@@ -104,7 +104,7 @@ h1 {
   border: none;
 }
 .nominate-button-disabled p {
-  color: white;
+  color: #888888;
   display: block;
   margin: 0;
 }

@@ -12,8 +12,7 @@ const Search = ({ getResult }) => {
 
   const SearchMovie = async () => {
     const result = await axios(
-      `http://www.omdbapi.com/?apikey=e95d3a07&s=${text}`
-      // `http://www.omdbapi.com/?apikey=e95d3a07&s=avengers`
+      `https://www.omdbapi.com/?apikey=e95d3a07&s=${text}`
     );
     setMovies(result.data.Search);
   };

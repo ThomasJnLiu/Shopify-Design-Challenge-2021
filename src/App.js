@@ -10,6 +10,7 @@ import axios from "axios";
 const App = () => {
   const [movies, setMovies] = useState([]);
   const [nominations, setNominations] = useState([]);
+  const [nominationCapped, setNominationCapped] = useState(false);
   const onAdd = (nomMovie) => {
     const exist = nominations.find((x) => x.imdbID === nomMovie.imdbID);
     if (exist) {
@@ -37,7 +38,12 @@ const App = () => {
   };
 
   useEffect(() => {
-    console.log({ nominations });
+    if (nominations.length === 5) {
+      setNominationCapped(true);
+    } else {
+      setNominationCapped(false);
+    }
+    console.log(nominationCapped);
   }, [nominations]);
   // const url = "http://www.omdbapi.com/?apikey=e95d3a07&s=";
   // const [query, setQuery] = useState("");
@@ -69,7 +75,11 @@ const App = () => {
           newMovies={movies}
           nominations={nominations}
         />
-        <Nominations onRemove={onRemove} movies={nominations} />
+        <Nominations
+          onRemove={onRemove}
+          movies={nominations}
+          nominationCapped={nominationCapped}
+        />
       </div>
     </div>
   );

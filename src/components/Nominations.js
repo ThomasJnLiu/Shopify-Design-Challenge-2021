@@ -1,6 +1,7 @@
 import React, { useEffect } from "react";
 
-const Nominations = ({ movies, onRemove, nominations }) => {
+const Nominations = ({ movies, onRemove, nominationCapped }) => {
+  console.log(nominationCapped);
   return (
     <div className="nominations">
       <h1>Nominations</h1>
@@ -16,6 +17,17 @@ const Nominations = ({ movies, onRemove, nominations }) => {
           );
         })}
       </ul>
+      <button
+        onClick={() => {
+          if (nominationCapped) window.alert("Thank you for submitting!");
+        }}
+        className={
+          nominationCapped ? "nominate-button" : "nominate-button-disabled"
+        }
+      >
+        <p>Submit</p>
+      </button>
+      {/* {nominationCapped ? <button>Submit</button> : <h1>not</h1>} */}
     </div>
   );
 };
