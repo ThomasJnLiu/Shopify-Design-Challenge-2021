@@ -11,7 +11,8 @@ const Search = ({ getResult }) => {
 
   const SearchMovie = async () => {
     const result = await axios(
-      `https://www.omdbapi.com/?apikey=e95d3a07&s=${text}`
+      // `https://www.omdbapi.com/?apikey=e95d3a07&s=${text}`
+      `https://www.omdbapi.com/?apikey=e95d3a07&s=batman`
     );
     setMovies(result.data.Search);
   };
@@ -23,7 +24,6 @@ const Search = ({ getResult }) => {
   return (
     <div className="search">
       <form>
-        <h1>Movie Title</h1>
         <input
           type="text"
           placeholder="Search movies"
@@ -31,8 +31,17 @@ const Search = ({ getResult }) => {
           onChange={(event) => OnChange(event.target.value)}
           autoFocus
         />
-      </form>
-      <button onClick={SearchMovie}>Search</button>
+      </form>{" "}
+      <button onClick={SearchMovie}>
+        Search
+        {/* <img src={process.env.PUBLIC_URL + "/search.png"} />{" "} */}
+      </button>
+      {/* <input
+        onClick={SearchMovie}
+        alt="search"
+        type="image"
+        src={process.env.PUBLIC_URL + "/search.png"}
+      /> */}
     </div>
   );
 };

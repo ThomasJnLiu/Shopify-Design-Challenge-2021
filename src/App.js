@@ -39,16 +39,21 @@ const App = () => {
     <div className="App">
       <Search getResult={(r) => setMovies(r)} />
       <div className="content">
-        <MoviesGrid
-          onAdd={onAdd}
-          newMovies={movies}
-          nominations={nominations}
-        />
+        {/* empty div is here for grid layout, removing it will cause
+        movies to shift to left cells, there's 100% a better way to do this */}
+        <div className="filler"></div>
         <Nominations
           onRemove={onRemove}
           movies={nominations}
           nominationCapped={nominationCapped}
         />
+        <div className="movies-container">
+          <MoviesGrid
+            onAdd={onAdd}
+            newMovies={movies}
+            nominations={nominations}
+          />
+        </div>
       </div>
     </div>
   );

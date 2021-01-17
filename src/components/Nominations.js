@@ -4,7 +4,7 @@ const Nominations = ({ movies, onRemove, nominationCapped }) => {
   console.log(nominationCapped);
   return (
     <div className="nominations">
-      <h1>Nominations</h1>
+      <h1>Nominations (Max 5)</h1>
       {movies.length === 0 && <div>No Nominations</div>}
 
       <ul>
