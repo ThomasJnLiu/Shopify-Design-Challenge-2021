@@ -19,7 +19,8 @@ const Nominations = ({ movies, onRemove, nominationCapped }) => {
       </ul>
       <button
         onClick={() => {
-          if (nominationCapped) window.alert("Thank you for submitting!");
+          if (nominationCapped)
+            window.alert("Your nominations have been submitted!");
         }}
         className={
           nominationCapped ? "nominate-button" : "nominate-button-disabled"

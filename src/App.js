@@ -3,6 +3,7 @@ import "./App.css";
 import Search from "./components/Search";
 import MoviesGrid from "./components/MoviesGrid";
 import Nominations from "./components/Nominations";
+import Header from "./components/Header";
 
 const App = () => {
   const [movies, setMovies] = useState([]);
@@ -37,6 +38,7 @@ const App = () => {
 
   return (
     <div className="App">
+      <Header />
       <Search getResult={(r) => setMovies(r)} />
       <div className="content">
         {/* empty div is here for grid layout, removing it will cause
