@@ -9,6 +9,8 @@ const App = () => {
   const [movies, setMovies] = useState([]);
   const [nominations, setNominations] = useState([]);
   const [nominationCapped, setNominationCapped] = useState(false);
+  const [loading, setLoading] = useState(false);
+
   const onAdd = (nomMovie) => {
     const exist = nominations.find((x) => x.imdbID === nomMovie.imdbID);
     if (exist) {
@@ -39,7 +41,10 @@ const App = () => {
   return (
     <div className="App">
       <Header />
-      <Search getResult={(r) => setMovies(r)} />
+      <Search
+        getResult={(r) => setMovies(r)}
+        getLoading={(l) => setLoading(l)}
+      />
       <div className="content">
         {/* empty div is here for grid layout, removing it will cause
         movies to shift to left cells, there's 100% a better way to do this */}
@@ -54,6 +59,7 @@ const App = () => {
             onAdd={onAdd}
             newMovies={movies}
             nominations={nominations}
+            loading={loading}
           />
         </div>
       </div>

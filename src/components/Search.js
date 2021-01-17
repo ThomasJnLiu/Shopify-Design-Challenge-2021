@@ -1,26 +1,31 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 
-const Search = ({ getResult }) => {
+const Search = ({ getResult, getLoading }) => {
   const [text, setText] = useState("");
   const [movies, setMovies] = useState([]);
+  const [loading, setLoading] = useState(false);
 
   const OnChange = (q) => {
     setText(q);
   };
 
   const SearchMovie = async () => {
+    setLoading(true);
     const result = await axios(
-      // `https://www.omdbapi.com/?apikey=e95d3a07&s=${text}`
-      `https://www.omdbapi.com/?apikey=e95d3a07&s=batman`
+      `https://www.omdbapi.com/?apikey=e95d3a07&s=${text}`
     );
     setMovies(result.data.Search);
+    setLoading(false);
   };
 
   useEffect(() => {
     getResult(movies);
   }, [movies]);
 
+  useEffect(() => {
+    getLoading(loading);
+  }, [loading]);
   return (
     <div className="search">
       <form>
