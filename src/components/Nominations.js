@@ -4,7 +4,9 @@ const Nominations = ({ movies, onRemove, nominationCapped }) => {
   return (
     <div className="nominations">
       <h1>Nominations (Please choose 5)</h1>
-      {movies.length === 0 && <div>No Nominations</div>}
+      {movies.length === 0 && (
+        <div style={{ color: "#808080" }}>No Nominations</div>
+      )}
 
       <ul>
         {movies.map((movies, key) => {
