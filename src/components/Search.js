@@ -37,16 +37,7 @@ const Search = ({ getResult, getLoading }) => {
           autoFocus
         />
       </form>{" "}
-      <button onClick={SearchMovie}>
-        Search
-        {/* <img src={process.env.PUBLIC_URL + "/search.png"} />{" "} */}
-      </button>
-      {/* <input
-        onClick={SearchMovie}
-        alt="search"
-        type="image"
-        src={process.env.PUBLIC_URL + "/search.png"}
-      /> */}
+      <button onClick={SearchMovie}>Search</button>
     </div>
   );
 };

@@ -16,6 +16,7 @@ const Header = () => {
           </p>
           <a
             target="_blank"
+            rel="noreferrer"
             href="https://github.com/ThomasJnLiu/Shopify-Design-Challenge-2021"
           >
             Link to the repo

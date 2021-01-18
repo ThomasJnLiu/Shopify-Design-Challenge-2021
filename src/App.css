@@ -194,8 +194,7 @@ li {
   text-decoration: none;
   border-radius: 3px;
 }
-.header-project-info a:hover {
-}
+
 @media (max-width: 800px) {
   .filler {
     display: none;
