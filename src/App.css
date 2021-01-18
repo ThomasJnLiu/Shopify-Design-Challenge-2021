@@ -98,7 +98,8 @@ h1 {
 }
 
 .nominate-button:hover,
-.search button:hover {
+.search button:hover,
+.header-project-info a:hover {
   background-color: #5e962d;
 }
 .nominate-button p {
@@ -176,6 +177,25 @@ li {
 .header img {
   align-self: center;
 }
+.header-text {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+.header-project-info {
+  text-align: right;
+}
+.header-project-info a {
+  padding: 0.75rem;
+  display: inline-block;
+  margin-top: 1rem;
+  background-color: #83a936;
+  color: white;
+  text-decoration: none;
+  border-radius: 3px;
+}
+.header-project-info a:hover {
+}
 @media (max-width: 800px) {
   .filler {
     display: none;
@@ -186,6 +206,19 @@ li {
   }
   .movies {
     grid-template-columns: repeat(2, 1fr);
+  }
+
+  .header-text {
+    display: block;
+  }
+  .header-text div {
+    display: block;
+  }
+  .header-project-info {
+    text-align: left;
+  }
+  .header-project-info a {
+    margin-top: 0;
   }
 }
 
@@ -216,6 +249,7 @@ li {
     width: 90%;
   }
 }
+
 @media (max-width: 500px) {
   .filler {
     display: none;
