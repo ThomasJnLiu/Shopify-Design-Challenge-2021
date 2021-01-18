@@ -190,7 +190,11 @@ li {
   text-decoration: none;
   border-radius: 3px;
 }
-
+@media (max-width: 940px) {
+  .nominations h1 {
+    font-size: 1rem;
+  }
+}
 @media (max-width: 800px) {
   .filler {
     display: none;
@@ -200,6 +204,7 @@ li {
     position: static;
     width: 70%;
   }
+
   .movies {
     grid-template-columns: repeat(2, 1fr);
   }
