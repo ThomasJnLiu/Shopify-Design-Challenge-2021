@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/Shopify-Design-Challenge-2021/static/css/main.b626038c.chunk.css",
+    "main.css": "/Shopify-Design-Challenge-2021/static/css/main.c52c1c75.chunk.css",
     "main.js": "/Shopify-Design-Challenge-2021/static/js/main.e3fe7808.chunk.js",
     "main.js.map": "/Shopify-Design-Challenge-2021/static/js/main.e3fe7808.chunk.js.map",
     "runtime-main.js": "/Shopify-Design-Challenge-2021/static/js/runtime-main.d4a68606.js",
@@ -10,14 +10,14 @@
     "static/js/3.f0890c9a.chunk.js": "/Shopify-Design-Challenge-2021/static/js/3.f0890c9a.chunk.js",
     "static/js/3.f0890c9a.chunk.js.map": "/Shopify-Design-Challenge-2021/static/js/3.f0890c9a.chunk.js.map",
     "index.html": "/Shopify-Design-Challenge-2021/index.html",
-    "static/css/main.b626038c.chunk.css.map": "/Shopify-Design-Challenge-2021/static/css/main.b626038c.chunk.css.map",
+    "static/css/main.c52c1c75.chunk.css.map": "/Shopify-Design-Challenge-2021/static/css/main.c52c1c75.chunk.css.map",
     "static/js/2.7ffc25a5.chunk.js.LICENSE.txt": "/Shopify-Design-Challenge-2021/static/js/2.7ffc25a5.chunk.js.LICENSE.txt",
     "static/media/App.css": "/Shopify-Design-Challenge-2021/static/media/Motiva-Sans.40cc5b76.ttf"
   },
   "entrypoints": [
     "static/js/runtime-main.d4a68606.js",
     "static/js/2.7ffc25a5.chunk.js",
-    "static/css/main.b626038c.chunk.css",
+    "static/css/main.c52c1c75.chunk.css",
     "static/js/main.e3fe7808.chunk.js"
   ]
 }
