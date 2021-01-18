@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import { Helmet } from "react-helmet";
 import "./App.css";
 import Search from "./components/Search";
 import MoviesGrid from "./components/MoviesGrid";
@@ -39,31 +40,36 @@ const App = () => {
   }, [nominations]);
 
   return (
-    <div className="App">
-      <Header />
-      <Search
-        getResult={(r) => setMovies(r)}
-        getLoading={(l) => setLoading(l)}
-      />
-      <div className="content">
-        {/* empty div is here for grid layout, removing it will cause
-        movies to shift to left cells, there's 100% a better way to do this */}
-        <div className="filler"></div>
-        <Nominations
-          onRemove={onRemove}
-          movies={nominations}
-          nominationCapped={nominationCapped}
+    <>
+      <Helmet>
+        <title>The Shoppies</title>
+      </Helmet>
+      <div className="App">
+        <Header />
+        <Search
+          getResult={(r) => setMovies(r)}
+          getLoading={(l) => setLoading(l)}
         />
-        <div className="movies-container">
-          <MoviesGrid
-            onAdd={onAdd}
-            newMovies={movies}
-            nominations={nominations}
-            loading={loading}
+        <div className="content">
+          {/* empty div is here for grid layout, removing it will cause
+        movies to shift to left cells, there's 100% a better way to do this */}
+          <div className="filler"></div>
+          <Nominations
+            onRemove={onRemove}
+            movies={nominations}
+            nominationCapped={nominationCapped}
           />
+          <div className="movies-container">
+            <MoviesGrid
+              onAdd={onAdd}
+              newMovies={movies}
+              nominations={nominations}
+              loading={loading}
+            />
+          </div>
         </div>
       </div>
-    </div>
+    </>
   );
 };
 

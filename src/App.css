@@ -80,11 +80,7 @@ h1 {
   color: white;
   padding: 10px;
   border-radius: 3px;
-
   border: 1px;
-}
-.search button {
-  /* background: url(search.png); */
 }
 .nominate-button {
   background-color: #95bc46;
@@ -202,11 +198,11 @@ li {
   .nominations {
     display: block;
     position: static;
+    width: 70%;
   }
   .movies {
     grid-template-columns: repeat(2, 1fr);
   }
-
   .header-text {
     display: block;
   }
@@ -218,6 +214,9 @@ li {
   }
   .header-project-info a {
     margin-top: 0;
+  }
+  .search button {
+    margin-top: 1rem;
   }
 }
 
